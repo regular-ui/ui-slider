@@ -1,7 +1,7 @@
 import { Component } from 'rgui-ui-base';
-import template from './index.rgl';
+import { Movable } from 'rgui-ui-drag';
 import { dom } from 'regularjs';
-import 'rgui-ui-drag';
+import template from './index.rgl';
 
 /**
  * @class Slider
@@ -32,7 +32,13 @@ const Slider = Component.extend({
             _grid: { x: 0, y: 0 },
         }, this.data);
         this.supr();
-
+        this.watch();
+    },
+    /**
+     * @protected
+     * @override
+     */
+    watch() {
         this.$watch('value', (newValue, oldValue) => {
             this.$emit('change', {
                 sender: this,

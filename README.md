@@ -21,8 +21,7 @@ Regular UI - Slider
 
 ## Slider（滑块）
 
-- 基础示例+API: https://regular-ui.github.io/ui-slider/slider/index.html
-- 进阶案例: https://regular-ui.github.io/ui-slider/slider/case.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-slider/slider/index.html
 
 ## Copyright and License
 
