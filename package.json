@@ -1,7 +1,7 @@
 {
   "name": "rgui-ui-slider",
   "description": "Regular UI - Slider",
-  "version": "0.2.0",
+  "version": "0.2.0-alpha",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-slider",
@@ -11,8 +11,8 @@
   "keywords": ["regular", "ui", "slider"],
   "tags": ["regular", "ui", "slider"],
   "dependencies": {
-    "rgui-ui-base": "^0.2.0-alpha.4",
-    "rgui-ui-drag": "regular-ui/ui-drag#master"
+    "rgui-ui-base": "^0.2.0-alpha.5",
+    "rgui-ui-drag": "^0.2.0-alpha.1"
   },
   "peerDependencies": {
     "regularjs": "^0.4.3"

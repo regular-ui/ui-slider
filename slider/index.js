@@ -24,13 +24,13 @@ const Slider = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             value: 0,
             min: 0,
             max: 100,
             step: 0,
             _grid: { x: 0, y: 0 },
-        }, this.data);
+        });
         this.supr();
         this.watch();
     },
