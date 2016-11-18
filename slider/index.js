@@ -39,11 +39,21 @@ const Slider = Component.extend({
      * @override
      */
     watch() {
-        this.$watch('value', (newValue, oldValue) => {
+        this.$watch('value', (value) => {
+            const isOutOfRange = this.isOutOfRange(value);
+            if (isOutOfRange)
+                return this.data.value = isOutOfRange;
+
             this.$emit('change', {
                 sender: this,
-                value: newValue,
+                value,
             });
+        });
+
+        this.$watch(['min', 'max'], (min, max) => {
+            const isOutOfRange = this.isOutOfRange(this.data.value);
+            if (isOutOfRange)
+                this.data.value = isOutOfRange;
         });
     },
     computed: {
@@ -58,6 +68,13 @@ const Slider = Component.extend({
                 this.data.value = value;
             },
         },
+    },
+    isOutOfRange(value) {
+        let min = +this.data.min;
+        let max = +this.data.max;
+
+        // minDate && date < minDate && minDate，先判断是否为空，再判断是否超出范围，如果超出则返回范围边界的日期
+        return (value < min && min) || (value > max && max);
     },
     /**
      * @private
