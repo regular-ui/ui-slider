@@ -5,8 +5,8 @@ import template from './index.rgl';
 
 /**
  * @class Slider
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {number=0}                options.data.value              <=> 数值
  * @param {number=0}                options.data.min                <=> 最小值
  * @param {number=100}              options.data.max                <=> 最大值
@@ -70,8 +70,8 @@ const Slider = Component.extend({
         },
     },
     isOutOfRange(value) {
-        let min = +this.data.min;
-        let max = +this.data.max;
+        const min = +this.data.min;
+        const max = +this.data.max;
 
         // minDate && date < minDate && minDate，先判断是否为空，再判断是否超出范围，如果超出则返回范围边界的日期
         return (value < min && min) || (value > max && max);

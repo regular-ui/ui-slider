@@ -11,8 +11,8 @@
   "keywords": ["regular", "ui", "slider"],
   "tags": ["regular", "ui", "slider"],
   "dependencies": {
-    "rgui-ui-base": "^0.2.0-alpha.5",
-    "rgui-ui-drag": "^0.2.0-alpha.1"
+    "rgui-ui-base": "^0.2.0",
+    "rgui-ui-drag": "^0.2.0"
   },
   "peerDependencies": {
     "regularjs": "^0.4.3"

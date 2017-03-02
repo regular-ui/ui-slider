@@ -1,1 +1,1 @@
-@import './slider/index.mcss';
+@import './src/slider/index.mcss';
