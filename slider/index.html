@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -74,42 +74,44 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Slider</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Slider()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Slider</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Slider()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.value</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>数值</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.min</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>最小值</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.max</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>100</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>最大值</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.step</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>间隔</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否只读</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.value</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>数值</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.min</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>最小值</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.max</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>100</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>最大值</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.step</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>间隔</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否只读</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
